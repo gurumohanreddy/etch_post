@@ -62,6 +62,13 @@
                   <input type="textarea" class="form-control" ng-model="postctrl.newPost.description">
                 </div>
               </div>
+              <div class="form-group">
+                <label for="postLink" class="col-lg-2 control-label">Youtube Link</label>
+                 <div class="col-lg-10">
+                  <input type="text" class="form-control" ng-model="postctrl.newPost.link">
+                </div>
+              </div>
+
                 <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                   <button type="submit" class="btn btn-primary">Submit</button>
@@ -76,6 +83,7 @@
   <article class="post container" ng-repeat="post in postctrl.posts">
     <h3>{{post.title}}</h3>
     <p>{{post.description}}</p>
+      <a href="{{post.link}}">{{post.link}}</a>
   </article>
 </section>
 

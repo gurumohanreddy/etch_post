@@ -11,6 +11,8 @@ angular.module("Etchpost")
         var post = new Post();
         post.set("title",postctrl.newPost.title);
         post.set("description",postctrl.newPost.description);
+        post.set("link",postctrl.newPost.link);
+
       post.save({
       success: function(object) {
         console.log("Post saved sucessfully");
@@ -39,6 +41,7 @@ angular.module("Etchpost")
                 post = {};
                 post.title = obj.get("title");
                 post.description = obj.get("description");
+                post.link = obj.get("link");
                 postctrl.posts.push(post);
               });
           })
