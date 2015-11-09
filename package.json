@@ -1,0 +1,21 @@
+{
+  "name": "etch_post",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurumohanreddy/etch_post.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gurumohanreddy/etch_post/issues"
+  },
+  "homepage": "https://github.com/gurumohanreddy/etch_post#readme"
+}
