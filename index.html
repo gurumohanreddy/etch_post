@@ -6,9 +6,9 @@
   <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
   <link rel="stylesheet" href="production/css/common.css">
 
-
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="production/js/app.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
 
 </head>
 <body ng-controller="Postctrl as postctrl">
@@ -58,7 +58,7 @@
               </div>
               <div class="form-group">
                 <label for="postDescription" class="col-lg-2 control-label">Project Description</label>
-                <div class="col-lg-10">
+                 <div class="col-lg-10">
                   <input type="textarea" class="form-control" ng-model="postctrl.newPost.description">
                 </div>
               </div>
@@ -73,7 +73,7 @@
 </section>
 
 <section id="posts">
-  <article class="post" ng-repeat="post in postctrl.posts">
+  <article class="post container" ng-repeat="post in postctrl.posts">
     <h3>{{post.title}}</h3>
     <p>{{post.description}}</p>
   </article>
