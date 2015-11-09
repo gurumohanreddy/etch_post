@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^2.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
