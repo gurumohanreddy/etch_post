@@ -46,8 +46,9 @@
   </div>
 </nav>
 </header>
-<section class="container">
-  <form class="form-horizontal well" ng-submit="postctrl.addPost()">
+<section class="container postingform">
+  <button ng-click="posting = !posting">Post Your Project</button>
+  <form class="form-horizontal well" ng-show="posting" ng-submit="postctrl.addPost()">
               <fieldset>
               <legend>Post your project</legend>
               <div class="form-group">
