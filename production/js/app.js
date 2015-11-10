@@ -9,9 +9,10 @@ angular.module("Etchpost")
       postctrl.addPost = function(){
         postctrl.posts.push(postctrl.newPost);
         var post = new Post();
+        var youtube = "https://www.youtube.com/embed/"+(postctrl.newPost.link.split('=')[1]);
         post.set("title",postctrl.newPost.title);
         post.set("description",postctrl.newPost.description);
-        post.set("link",postctrl.newPost.link);
+        post.set("link",youtube);
 
       post.save({
       success: function(object) {
@@ -43,6 +44,7 @@ angular.module("Etchpost")
                 post.description = obj.get("description");
                 post.link = obj.get("link");
                 postctrl.posts.push(post);
+                console.log(post)
               });
           })
           .catch(function(error){
@@ -59,6 +61,6 @@ angular.module("Etchpost")
       postctrl.initializeNewPost();
       fetchPost();
 
-
+        
 
     });
