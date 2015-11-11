@@ -8,7 +8,10 @@
 
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="production/js/app.js"></script>
+  <script src="production/js/services/post_service.js"></script>
+  <script src="production/js/controller/post_controller.js"></script>
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+
 
 </head>
 <body ng-controller="Postctrl as postctrl">
@@ -27,8 +30,8 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#">Login</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -72,7 +75,7 @@
 
                 <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" >Submit</button>
                 </div>
               </div>
               </fieldset>
@@ -81,14 +84,12 @@
 </section>
 
 <section id="posts">
-  <article class="post container" ng-repeat="post in postctrl.posts">
+  <article class="post container well col-lg-offset-3 col-lg-6" ng-repeat="post in postctrl.posts">
     <h3>{{post.title}}</h3>
     <p>{{post.description}}</p>
       <!-- <a href="{{post.link}}">{{post.link}}</a> -->
-      <p>{{post.link}}</p>
-    <iframe width="420" height="315" src={post.link} frameborder="0" allowfullscreen></iframe>
-
-
+      <!-- <p>{{post.link}}</p> -->
+<iframe width="560" height="315" ng-src="https://www.youtube.com/embed/gx5GaKQvQPk" frameborder="0" allowfullscreen></iframe>
   </article>
 </section>
 
