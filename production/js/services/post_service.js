@@ -24,7 +24,17 @@ angular.module('Etchpost')
 
             };
 
+            PostServer.delete = function(postobj){
 
+                postobj.destroy({
+                success: function(){
+                  console.log("Deleted sucessfully");
+                },
+                error: function(){
+                    console.log("error deleting "+error.message);
+                }
+                });
+            };
 
             PostServer.fetch = function(){
                       PostServer.posts = [];
@@ -42,6 +52,7 @@ angular.module('Etchpost')
                         post.title = obj.get("title");
                         post.description = obj.get("description");
                         post.link = obj.get("link");
+                        post.parseObject = obj;
                         PostServer.posts.push(post);
                         //  console.log(post);
                       });

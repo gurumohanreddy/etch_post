@@ -19,6 +19,13 @@ angular.module('Etchpost')
       controller: 'NewPostctrl as newPostctrl'
   })
 
+
+  .state('login', {
+      url: '/login',
+      templateUrl: 'templates/posts/login.tmpl.html',
+      controller: 'LoginCtrl as loginctrl'
+  })
+
   // nested list with just some random string data
   .state('home.paragraph', {
       url: '/paragraph',

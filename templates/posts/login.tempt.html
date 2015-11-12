@@ -1,0 +1,56 @@
+<h1>Welcome to Etch Bricks Family</h1>
+
+<div class="container-fluid">
+  <div class="rows">
+    <div class="col-sm-6">
+      <form class="form-horizontal well"  ng-submit="newPostctrl.addPost()">
+                  <fieldset>
+                  <legend>Login</legend>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">UserName</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" ng-model="newPostctrl.newPost.title">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">Password</label>
+                     <div class="col-lg-10">
+                      <input type="password" class="form-control" ng-model="newPostctrl.newPost.description">
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary">LOGIN</button>
+                    </div>
+                  </div>
+                  </fieldset>
+        </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="form-horizontal well"  ng-submit="newPostctrl.addPost()">
+                  <fieldset>
+                  <legend>signup</legend>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">UserName</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" ng-model="newPostctrl.newPost.title">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">Password</label>
+                     <div class="col-lg-10">
+                      <input type="password" class="form-control" ng-model="newPostctrl.newPost.description">
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary">SIGNUP</button>
+                    </div>
+                  </div>
+                  </fieldset>
+        </form>
+    </div>
+  </div>
+</div>
