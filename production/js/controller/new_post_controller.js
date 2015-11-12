@@ -1,6 +1,9 @@
 angular.module("Etchpost")
-    .controller("NewPostctrl",function(PostServer){
+    .controller("NewPostctrl",function(PostServer,$state,AuthenticationService){
       var newPostctrl = this;
+      console.log('dsfsdh');
+
+      AuthenticationService.requireAuthentication();
 
       function init(){
 
@@ -10,13 +13,13 @@ angular.module("Etchpost")
 
 
       newPostctrl.addPost = function(){
-          
+
           PostServer.create(newPostctrl.newPost.title,
             newPostctrl.newPost.description,
             newPostctrl.newPost.link
           );
                   newPostctrl.initializeNewPost();
-
+                  $state.go('posts');
       };
 
 

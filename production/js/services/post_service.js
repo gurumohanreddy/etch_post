@@ -43,7 +43,7 @@ angular.module('Etchpost')
                   query.find().then(function(data){
                     differedQuery.resolve(data);
                   },function(error){
-                    differedQuery.reject(data);
+                    differedQuery.reject(error);
                   });
                   differedQuery.promise
                   .then(function(data){
@@ -54,7 +54,7 @@ angular.module('Etchpost')
                         post.link = obj.get("link");
                         post.parseObject = obj;
                         PostServer.posts.push(post);
-                        //  console.log(post);
+                         console.log(post);
                       });
                   })
                   .catch(function(error){

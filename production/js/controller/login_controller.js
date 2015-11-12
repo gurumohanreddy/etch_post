@@ -1,9 +1,17 @@
 angular.module("Etchpost")
-    .controller("LoginCtrl",function(PostServer){
+    .controller("LoginCtrl",function(PostServer,$state,AuthenticationService){
       var loginctrl = this;
 
         function init(){
+            redirectIfLoggedIn();
             loginctrl.initializeForms();
+        };
+
+        function redirectIfLoggedIn(){
+          if(AuthenticationService.loggedIn()){
+            $state.go('newpost');
+          }
+
         };
 
         loginctrl.initializeForms = function(){
@@ -16,28 +24,13 @@ angular.module("Etchpost")
             var username = loginctrl.loginUser.username,
                 password = loginctrl.loginUser.password;
 
-              Parse.User.logIn(username,password,{
-                  success: function(user){
-                    console.log('Logged In as '+user.get('username'));
-                  },
-                  error:function(user,error){
-                    console.log("Error logging in "+error.message);
-                  }
-              });
-
+                AuthenticationService.login(username,password);
           };
           loginctrl.signup = function(){
             var username = loginctrl.signupUser.username,
                 password = loginctrl.signupUser.password;
-                Parse.User.signUp(username,password,null,{
-                  success: function(user){
-                    console.log('Signed up as '+user.get('username'));
-                  },
-                  error:function(user,error){
-                    console.log("Error signing in "+error.message);
-                  }
-              });
 
+                AuthenticationService.signup(username,password);
           };
 
 
