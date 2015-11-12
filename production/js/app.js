@@ -1,2 +1,2 @@
 
-angular.module("Etchpost",[]);
+angular.module("Etchpost",['ui.router']);

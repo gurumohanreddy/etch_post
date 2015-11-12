@@ -43,7 +43,7 @@ angular.module('Etchpost')
                         post.description = obj.get("description");
                         post.link = obj.get("link");
                         PostServer.posts.push(post);
-                        // console.log(postctrl.posts);
+                        //  console.log(post);
                       });
                   })
                   .catch(function(error){
